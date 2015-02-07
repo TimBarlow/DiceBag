@@ -30,7 +30,7 @@ namespace DiceBag
                 return;
             sides = Convert.ToInt32(sidesTbx.Text.ToString());
             int result = bag.Roll(sides);
-            resultsLbx.Items.Add(result.ToString());
+            resultsLbx.Items.Insert(0,result.ToString());
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -46,37 +46,37 @@ namespace DiceBag
         private void roll3Btn_Click(object sender, EventArgs e)
         {
 
-            resultsLbx.Items.Add(bag.Roll(3).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(3).ToString());
         }
 
         private void roll4Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(4).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(4).ToString());
         }
 
         private void roll6Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(6).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(6).ToString());
         }
 
         private void roll8Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(8).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(8).ToString());
         }
 
         private void roll10Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(10).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(10).ToString());
         }
 
         private void roll12Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(12).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(12).ToString());
         }
 
         private void roll20Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Add(bag.Roll(20).ToString());
+            resultsLbx.Items.Insert(0,bag.Roll(20).ToString());
         }
 
     
