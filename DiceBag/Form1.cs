@@ -86,7 +86,30 @@ namespace DiceBag
 
         private void rollAllBtn_Click(object sender, EventArgs e)
         {
-            RollBtn_Click(sender, e);
+            int tempResult = 0;
+            int result = 0;
+            for (int i = 0; i < NUM_OF_DICE; i++)
+            {
+                tempResult = 0;
+                if (dice[i].GetMod() != 0)
+                {
+                    if (dice[i].GetNumber() != 0)
+                    {
+                        tempResult = bag.RollMod(dice[i].GetSides(), dice[i].GetNumber(), dice[i].GetMod());
+                    }
+                    else
+                    {
+                        tempResult = bag.RollMod(dice[i].GetSides(),  dice[i].GetMod());
+                    }
+                }
+                else if (dice[i].GetNumber() != 0)
+                {
+                    tempResult = bag.Roll(dice[i].GetNumber(), dice[i].GetSides());
+                }
+               
+                result += tempResult;
+            }
+            resultsLbx.Items.Insert(0, result.ToString());
         }
 
         private void roll3Btn_Click(object sender, EventArgs e)

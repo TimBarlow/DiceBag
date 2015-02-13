@@ -132,7 +132,7 @@
             this.sidesDvarTbx.Name = "sidesDvarTbx";
             this.sidesDvarTbx.Size = new System.Drawing.Size(39, 20);
             this.sidesDvarTbx.TabIndex = 4;
-            this.sidesDvarTbx.Text = "6";
+            this.sidesDvarTbx.Text = "2";
             this.sidesDvarTbx.TextChanged += new System.EventHandler(this.sidesDvarTbx_TextChanged);
             // 
             // label3
@@ -175,7 +175,7 @@
             this.resultsLbx.FormattingEnabled = true;
             this.resultsLbx.Location = new System.Drawing.Point(265, 36);
             this.resultsLbx.Name = "resultsLbx";
-            this.resultsLbx.Size = new System.Drawing.Size(120, 225);
+            this.resultsLbx.Size = new System.Drawing.Size(120, 251);
             this.resultsLbx.TabIndex = 9;
             // 
             // label6
