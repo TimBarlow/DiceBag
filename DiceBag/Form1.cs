@@ -22,8 +22,9 @@ namespace DiceBag
         const int D10 = 5;
         const int D12 = 6;
         const int D20 = 7;
-        const int NUM_OF_DICE = 8;
-        DieRow[] dice = new DieRow[8];
+        const int D100 = 8;
+        const int NUM_OF_DICE = 9;
+        DieRow[] dice = new DieRow[NUM_OF_DICE];
 
         public Form1()
         {
@@ -40,6 +41,7 @@ namespace DiceBag
             dice[D10] = new DieRow(0, 10, 0);
             dice[D12] = new DieRow(0, 12, 0);
             dice[D20] = new DieRow(0, 20, 0);
+            dice[D100] = new DieRow(0, 100, 0);
 
             bag = new DiceBag();
             
@@ -109,6 +111,92 @@ namespace DiceBag
         private void amountD3Tbx_TextChanged(object sender, EventArgs e)
         {
             dice[D3].SetNumber(Convert.ToInt32(amountD3Tbx.Text.ToString()));
+        }
+
+
+        private void amountD6Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D6].SetNumber(Convert.ToInt32(amountD6Tbx.Text.ToString()));
+        }
+
+        private void amountD4Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D4].SetNumber(Convert.ToInt32(amountD4Tbx.Text.ToString()));
+        }
+
+        private void amountD8Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D8].SetNumber(Convert.ToInt32(amountD8Tbx.Text.ToString()));
+        }
+
+        private void amountD10Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D10].SetNumber(Convert.ToInt32(amountD10Tbx.Text.ToString()));
+        }
+
+        private void amountD12Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D12].SetNumber(Convert.ToInt32(amountD12Tbx.Text.ToString()));
+        }
+
+        private void amountD20Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D20].SetNumber(Convert.ToInt32(amountD20Tbx.Text.ToString()));
+        }
+
+        private void amountD100Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D100].SetNumber(Convert.ToInt32(amountD100Tbx.Text.ToString()));
+        }
+
+        private void sidesDvarTbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[DVAR].SetSides(Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+        }
+
+        private void modD3Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D3].SetMod(Convert.ToInt32(modD3Tbx.Text.ToString()));
+        }
+
+        private void modDvarTbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[DVAR].SetMod(Convert.ToInt32(modDvarTbx.Text.ToString()));
+        }
+
+        private void modD4Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D4].SetMod(Convert.ToInt32(modD4Tbx.Text.ToString()));
+        }
+
+        private void modD6Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D6].SetMod(Convert.ToInt32(modD6Tbx.Text.ToString()));
+        }
+
+        private void modD8Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D6].SetMod(Convert.ToInt32(modD6Tbx.Text.ToString()));
+        }
+
+        private void modD10Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D10].SetMod(Convert.ToInt32(modD10Tbx.Text.ToString()));
+        }
+
+        private void modD12Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D12].SetMod(Convert.ToInt32(modD12Tbx.Text.ToString()));
+        }
+
+        private void modD20Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D20].SetMod(Convert.ToInt32(modD20Tbx.Text.ToString()));
+        }
+
+        private void modD100Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D100].SetMod(Convert.ToInt32(modD100Tbx.Text.ToString()));
         }
 
     
