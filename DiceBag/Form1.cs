@@ -57,12 +57,12 @@ namespace DiceBag
             {
                 if (amountDvarTbx.Text.ToString() != "" && amountDvarTbx.Text.ToString() != "0")
                 {
-                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(amountDvarTbx.Text.ToString()), Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(amountDvarTbx.Text.ToString()), Convert.ToInt32(modDvarTbx.Text.ToString()));
                     output = result.ToString() + " = " + amountDvarTbx.Text.ToString() + " d" + sidesDvarTbx.Text.ToString() + " + " + modDvarTbx.Text.ToString();
                 }
                 else
                 {
-                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(modDvarTbx.Text.ToString()));
                     output =  result.ToString() + " = " + "1 d" + sidesDvarTbx.Text.ToString() + " + " + modDvarTbx.Text.ToString();
                 }
             }
@@ -91,8 +91,33 @@ namespace DiceBag
 
         private void roll3Btn_Click(object sender, EventArgs e)
         {
+            int result = 0;
+            string output;
 
-            resultsLbx.Items.Insert(0,bag.Roll(3).ToString());
+            if (modD3Tbx.Text.ToString() != "" && modD3Tbx.Text.ToString() != "0")
+            {
+                if (amountD3Tbx.Text.ToString() != "" && amountD3Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D3].GetSides(), Convert.ToInt32(amountD3Tbx.Text.ToString()), Convert.ToInt32(modD3Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD3Tbx.Text.ToString() + " d" + dice[D3].GetSides().ToString() + " + " + modD3Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D3].GetSides(), Convert.ToInt32(modD3Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D3].GetSides().ToString() + " + " + modD3Tbx.Text.ToString();
+                }
+            }
+            else if (amountD3Tbx.Text.ToString() != "" && amountD3Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D3].GetSides(), Convert.ToInt32(amountD3Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD3Tbx.Text.ToString() + " d" + dice[D3].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D3].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D3].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll4Btn_Click(object sender, EventArgs e)
