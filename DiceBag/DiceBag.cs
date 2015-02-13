@@ -6,9 +6,13 @@ using System.Threading.Tasks;
 
 namespace DiceBag
 {
+    
+
     class DiceBag
     {
+       
         //private members
+        int sides;
         private string log;
         private Random rand;
         //private functions

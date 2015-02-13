@@ -29,57 +29,57 @@
         private void InitializeComponent()
         {
             this.rollBtn = new System.Windows.Forms.Button();
-            this.AmountTbx = new System.Windows.Forms.TextBox();
+            this.amountDvarTbx = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.sidesTbx = new System.Windows.Forms.TextBox();
+            this.sidesDvarTbx = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.modTbx = new System.Windows.Forms.TextBox();
+            this.modDvarTbx = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.resultsLbx = new System.Windows.Forms.ListBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.amountD3Tbx = new System.Windows.Forms.TextBox();
             this.roll3Btn = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.amountD4Tbx = new System.Windows.Forms.TextBox();
             this.roll4Btn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.amountD6Tbx = new System.Windows.Forms.TextBox();
             this.roll6Btn = new System.Windows.Forms.Button();
             this.label16 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.amountD8Tbx = new System.Windows.Forms.TextBox();
             this.roll8Btn = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.amountD10Tbx = new System.Windows.Forms.TextBox();
             this.roll10Btn = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.textBox11 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.amountD12Tbx = new System.Windows.Forms.TextBox();
             this.roll12Btn = new System.Windows.Forms.Button();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox13 = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.amountD20Tbx = new System.Windows.Forms.TextBox();
             this.roll20Btn = new System.Windows.Forms.Button();
             this.rollAllBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -94,13 +94,13 @@
             this.rollBtn.UseVisualStyleBackColor = true;
             this.rollBtn.Click += new System.EventHandler(this.RollBtn_Click);
             // 
-            // AmountTbx
+            // amountDvarTbx
             // 
-            this.AmountTbx.Location = new System.Drawing.Point(56, 39);
-            this.AmountTbx.Name = "AmountTbx";
-            this.AmountTbx.Size = new System.Drawing.Size(43, 20);
-            this.AmountTbx.TabIndex = 1;
-            this.AmountTbx.Text = "1";
+            this.amountDvarTbx.Location = new System.Drawing.Point(56, 39);
+            this.amountDvarTbx.Name = "amountDvarTbx";
+            this.amountDvarTbx.Size = new System.Drawing.Size(43, 20);
+            this.amountDvarTbx.TabIndex = 1;
+            this.amountDvarTbx.TextChanged += new System.EventHandler(this.AmountTbx_TextChanged);
             // 
             // label1
             // 
@@ -120,13 +120,13 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "d";
             // 
-            // sidesTbx
+            // sidesDvarTbx
             // 
-            this.sidesTbx.Location = new System.Drawing.Point(124, 39);
-            this.sidesTbx.Name = "sidesTbx";
-            this.sidesTbx.Size = new System.Drawing.Size(39, 20);
-            this.sidesTbx.TabIndex = 4;
-            this.sidesTbx.Text = "6";
+            this.sidesDvarTbx.Location = new System.Drawing.Point(124, 39);
+            this.sidesDvarTbx.Name = "sidesDvarTbx";
+            this.sidesDvarTbx.Size = new System.Drawing.Size(39, 20);
+            this.sidesDvarTbx.TabIndex = 4;
+            this.sidesDvarTbx.Text = "6";
             // 
             // label3
             // 
@@ -146,12 +146,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "+";
             // 
-            // modTbx
+            // modDvarTbx
             // 
-            this.modTbx.Location = new System.Drawing.Point(189, 39);
-            this.modTbx.Name = "modTbx";
-            this.modTbx.Size = new System.Drawing.Size(40, 20);
-            this.modTbx.TabIndex = 7;
+            this.modDvarTbx.Location = new System.Drawing.Point(189, 39);
+            this.modDvarTbx.Name = "modDvarTbx";
+            this.modDvarTbx.Size = new System.Drawing.Size(40, 20);
+            this.modDvarTbx.TabIndex = 7;
             // 
             // label5
             // 
@@ -204,12 +204,13 @@
             this.label8.TabIndex = 13;
             this.label8.Text = "d";
             // 
-            // textBox3
+            // amountD3Tbx
             // 
-            this.textBox3.Location = new System.Drawing.Point(56, 68);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(43, 20);
-            this.textBox3.TabIndex = 12;
+            this.amountD3Tbx.Location = new System.Drawing.Point(56, 68);
+            this.amountD3Tbx.Name = "amountD3Tbx";
+            this.amountD3Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD3Tbx.TabIndex = 12;
+            this.amountD3Tbx.TextChanged += new System.EventHandler(this.amountD3Tbx_TextChanged);
             // 
             // roll3Btn
             // 
@@ -265,12 +266,12 @@
             this.label12.TabIndex = 20;
             this.label12.Text = "d";
             // 
-            // textBox4
+            // amountD4Tbx
             // 
-            this.textBox4.Location = new System.Drawing.Point(56, 97);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(43, 20);
-            this.textBox4.TabIndex = 19;
+            this.amountD4Tbx.Location = new System.Drawing.Point(56, 97);
+            this.amountD4Tbx.Name = "amountD4Tbx";
+            this.amountD4Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD4Tbx.TabIndex = 19;
             // 
             // roll4Btn
             // 
@@ -316,12 +317,12 @@
             this.label15.TabIndex = 26;
             this.label15.Text = "d";
             // 
-            // textBox6
+            // amountD6Tbx
             // 
-            this.textBox6.Location = new System.Drawing.Point(56, 126);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(43, 20);
-            this.textBox6.TabIndex = 25;
+            this.amountD6Tbx.Location = new System.Drawing.Point(56, 126);
+            this.amountD6Tbx.Name = "amountD6Tbx";
+            this.amountD6Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD6Tbx.TabIndex = 25;
             // 
             // roll6Btn
             // 
@@ -367,12 +368,12 @@
             this.label18.TabIndex = 32;
             this.label18.Text = "d";
             // 
-            // textBox8
+            // amountD8Tbx
             // 
-            this.textBox8.Location = new System.Drawing.Point(56, 155);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(43, 20);
-            this.textBox8.TabIndex = 31;
+            this.amountD8Tbx.Location = new System.Drawing.Point(56, 155);
+            this.amountD8Tbx.Name = "amountD8Tbx";
+            this.amountD8Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD8Tbx.TabIndex = 31;
             // 
             // roll8Btn
             // 
@@ -418,12 +419,12 @@
             this.label21.TabIndex = 38;
             this.label21.Text = "d";
             // 
-            // textBox10
+            // amountD10Tbx
             // 
-            this.textBox10.Location = new System.Drawing.Point(56, 184);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(43, 20);
-            this.textBox10.TabIndex = 37;
+            this.amountD10Tbx.Location = new System.Drawing.Point(56, 184);
+            this.amountD10Tbx.Name = "amountD10Tbx";
+            this.amountD10Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD10Tbx.TabIndex = 37;
             // 
             // roll10Btn
             // 
@@ -469,12 +470,12 @@
             this.label24.TabIndex = 44;
             this.label24.Text = "d";
             // 
-            // textBox12
+            // amountD12Tbx
             // 
-            this.textBox12.Location = new System.Drawing.Point(56, 213);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(43, 20);
-            this.textBox12.TabIndex = 43;
+            this.amountD12Tbx.Location = new System.Drawing.Point(56, 213);
+            this.amountD12Tbx.Name = "amountD12Tbx";
+            this.amountD12Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD12Tbx.TabIndex = 43;
             // 
             // roll12Btn
             // 
@@ -520,12 +521,12 @@
             this.label27.TabIndex = 50;
             this.label27.Text = "d";
             // 
-            // textBox14
+            // amountD20Tbx
             // 
-            this.textBox14.Location = new System.Drawing.Point(56, 242);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(43, 20);
-            this.textBox14.TabIndex = 49;
+            this.amountD20Tbx.Location = new System.Drawing.Point(56, 242);
+            this.amountD20Tbx.Name = "amountD20Tbx";
+            this.amountD20Tbx.Size = new System.Drawing.Size(43, 20);
+            this.amountD20Tbx.TabIndex = 49;
             // 
             // roll20Btn
             // 
@@ -557,54 +558,54 @@
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label27);
-            this.Controls.Add(this.textBox14);
+            this.Controls.Add(this.amountD20Tbx);
             this.Controls.Add(this.roll20Btn);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox11);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.amountD12Tbx);
             this.Controls.Add(this.roll12Btn);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.textBox9);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label21);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.amountD10Tbx);
             this.Controls.Add(this.roll10Btn);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label18);
-            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.amountD8Tbx);
             this.Controls.Add(this.roll8Btn);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.amountD6Tbx);
             this.Controls.Add(this.roll6Btn);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.amountD4Tbx);
             this.Controls.Add(this.roll4Btn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.amountD3Tbx);
             this.Controls.Add(this.roll3Btn);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.resultsLbx);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.modTbx);
+            this.Controls.Add(this.modDvarTbx);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.sidesTbx);
+            this.Controls.Add(this.sidesDvarTbx);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.AmountTbx);
+            this.Controls.Add(this.amountDvarTbx);
             this.Controls.Add(this.rollBtn);
             this.Name = "Form1";
             this.Text = "Dice Bag";
@@ -617,57 +618,57 @@
         #endregion
 
         private System.Windows.Forms.Button rollBtn;
-        private System.Windows.Forms.TextBox AmountTbx;
+        private System.Windows.Forms.TextBox amountDvarTbx;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox sidesTbx;
+        private System.Windows.Forms.TextBox sidesDvarTbx;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox modTbx;
+        private System.Windows.Forms.TextBox modDvarTbx;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ListBox resultsLbx;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox amountD3Tbx;
         private System.Windows.Forms.Button roll3Btn;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox amountD4Tbx;
         private System.Windows.Forms.Button roll4Btn;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox amountD6Tbx;
         private System.Windows.Forms.Button roll6Btn;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox amountD8Tbx;
         private System.Windows.Forms.Button roll8Btn;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox amountD10Tbx;
         private System.Windows.Forms.Button roll10Btn;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox11;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox amountD12Tbx;
         private System.Windows.Forms.Button roll12Btn;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.TextBox textBox13;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox amountD20Tbx;
         private System.Windows.Forms.Button roll20Btn;
         private System.Windows.Forms.Button rollAllBtn;
     }

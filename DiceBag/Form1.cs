@@ -12,23 +12,45 @@ namespace DiceBag
 {
     public partial class Form1 : Form
     {
+        
         DiceBag bag;
+        const int DVAR = 0;
+        const int D3 = 1;
+        const int D4 = 2;
+        const int D6 = 3;
+        const int D8 = 4;
+        const int D10 = 5;
+        const int D12 = 6;
+        const int D20 = 7;
+        const int NUM_OF_DICE = 8;
+        DieRow[] dice = new DieRow[8];
+
         public Form1()
         {
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            bag = new DiceBag();
+            
+            dice[DVAR] = new DieRow();
+            dice[D3] = new DieRow(0, 3, 0);
+            dice[D4] = new DieRow(0, 4, 0);
+            dice[D6] = new DieRow(0, 6, 0);
+            dice[D8] = new DieRow(0, 8, 0);
+            dice[D10] = new DieRow(0, 10, 0);
+            dice[D12] = new DieRow(0, 12, 0);
+            dice[D20] = new DieRow(0, 20, 0);
 
+            bag = new DiceBag();
+            
         }
         private void RollBtn_Click(object sender, EventArgs e)
         {
             int sides = 0;
 
-            if (sidesTbx.Text.ToString() == "")
+            if (sidesDvarTbx.Text.ToString() == "")
                 return;
-            sides = Convert.ToInt32(sidesTbx.Text.ToString());
+            sides = Convert.ToInt32(sidesDvarTbx.Text.ToString());
             int result = bag.Roll(sides);
             resultsLbx.Items.Insert(0,result.ToString());
         }
@@ -77,6 +99,16 @@ namespace DiceBag
         private void roll20Btn_Click(object sender, EventArgs e)
         {
             resultsLbx.Items.Insert(0,bag.Roll(20).ToString());
+        }
+
+        private void AmountTbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[DVAR].SetNumber(Convert.ToInt32(amountDvarTbx.Text.ToString()));
+        }
+
+        private void amountD3Tbx_TextChanged(object sender, EventArgs e)
+        {
+            dice[D3].SetNumber(Convert.ToInt32(amountD3Tbx.Text.ToString()));
         }
 
     

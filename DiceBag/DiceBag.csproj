@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DiceBag.cs" />
+    <Compile Include="DieRow.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
