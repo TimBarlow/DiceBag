@@ -122,32 +122,188 @@ namespace DiceBag
 
         private void roll4Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(4).ToString());
+            int result = 0;
+            string output;
+
+            if (modD4Tbx.Text.ToString() != "" && modD4Tbx.Text.ToString() != "0")
+            {
+                if (amountD4Tbx.Text.ToString() != "" && amountD4Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D4].GetSides(), Convert.ToInt32(amountD4Tbx.Text.ToString()), Convert.ToInt32(modD4Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD4Tbx.Text.ToString() + " d" + dice[D4].GetSides().ToString() + " + " + modD4Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D4].GetSides(), Convert.ToInt32(modD4Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D4].GetSides().ToString() + " + " + modD4Tbx.Text.ToString();
+                }
+            }
+            else if (amountD4Tbx.Text.ToString() != "" && amountD4Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D4].GetSides(), Convert.ToInt32(amountD4Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD4Tbx.Text.ToString() + " d" + dice[D4].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D4].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D4].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll6Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(6).ToString());
+            int result = 0;
+            string output;
+
+            if (modD6Tbx.Text.ToString() != "" && modD6Tbx.Text.ToString() != "0")
+            {
+                if (amountD6Tbx.Text.ToString() != "" && amountD6Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D6].GetSides(), Convert.ToInt32(amountD6Tbx.Text.ToString()), Convert.ToInt32(modD6Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD6Tbx.Text.ToString() + " d" + dice[D6].GetSides().ToString() + " + " + modD6Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D6].GetSides(), Convert.ToInt32(modD6Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D6].GetSides().ToString() + " + " + modD6Tbx.Text.ToString();
+                }
+            }
+            else if (amountD6Tbx.Text.ToString() != "" && amountD6Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D6].GetSides(), Convert.ToInt32(amountD6Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD6Tbx.Text.ToString() + " d" + dice[D6].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D6].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D6].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll8Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(8).ToString());
+            int result = 0;
+            string output;
+
+            if (modD8Tbx.Text.ToString() != "" && modD8Tbx.Text.ToString() != "0")
+            {
+                if (amountD8Tbx.Text.ToString() != "" && amountD8Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D8].GetSides(), Convert.ToInt32(amountD8Tbx.Text.ToString()), Convert.ToInt32(modD8Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD8Tbx.Text.ToString() + " d" + dice[D8].GetSides().ToString() + " + " + modD8Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D8].GetSides(), Convert.ToInt32(modD8Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D8].GetSides().ToString() + " + " + modD8Tbx.Text.ToString();
+                }
+            }
+            else if (amountD8Tbx.Text.ToString() != "" && amountD8Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D8].GetSides(), Convert.ToInt32(amountD8Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD8Tbx.Text.ToString() + " d" + dice[D8].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D8].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D8].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll10Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(10).ToString());
+            int result = 0;
+            string output;
+
+            if (modD10Tbx.Text.ToString() != "" && modD10Tbx.Text.ToString() != "0")
+            {
+                if (amountD10Tbx.Text.ToString() != "" && amountD10Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D10].GetSides(), Convert.ToInt32(amountD10Tbx.Text.ToString()), Convert.ToInt32(modD10Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD10Tbx.Text.ToString() + " d" + dice[D10].GetSides().ToString() + " + " + modD10Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D10].GetSides(), Convert.ToInt32(modD10Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D10].GetSides().ToString() + " + " + modD10Tbx.Text.ToString();
+                }
+            }
+            else if (amountD10Tbx.Text.ToString() != "" && amountD10Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D10].GetSides(), Convert.ToInt32(amountD10Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD10Tbx.Text.ToString() + " d" + dice[D10].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D10].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D10].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll12Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(12).ToString());
+            int result = 0;
+            string output;
+
+            if (modD12Tbx.Text.ToString() != "" && modD12Tbx.Text.ToString() != "0")
+            {
+                if (amountD12Tbx.Text.ToString() != "" && amountD12Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D12].GetSides(), Convert.ToInt32(amountD12Tbx.Text.ToString()), Convert.ToInt32(modD12Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD12Tbx.Text.ToString() + " d" + dice[D12].GetSides().ToString() + " + " + modD12Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D12].GetSides(), Convert.ToInt32(modD12Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D12].GetSides().ToString() + " + " + modD12Tbx.Text.ToString();
+                }
+            }
+            else if (amountD12Tbx.Text.ToString() != "" && amountD12Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D12].GetSides(), Convert.ToInt32(amountD12Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD12Tbx.Text.ToString() + " d" + dice[D12].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D12].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D12].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void roll20Btn_Click(object sender, EventArgs e)
         {
-            resultsLbx.Items.Insert(0,bag.Roll(20).ToString());
+            int result = 0;
+            string output;
+
+            if (modD20Tbx.Text.ToString() != "" && modD20Tbx.Text.ToString() != "0")
+            {
+                if (amountD20Tbx.Text.ToString() != "" && amountD20Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D20].GetSides(), Convert.ToInt32(amountD20Tbx.Text.ToString()), Convert.ToInt32(modD20Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD20Tbx.Text.ToString() + " d" + dice[D20].GetSides().ToString() + " + " + modD20Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D20].GetSides(), Convert.ToInt32(modD20Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D20].GetSides().ToString() + " + " + modD20Tbx.Text.ToString();
+                }
+            }
+            else if (amountD20Tbx.Text.ToString() != "" && amountD20Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D20].GetSides(), Convert.ToInt32(amountD20Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD20Tbx.Text.ToString() + " d" + dice[D20].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D20].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D20].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void AmountTbx_TextChanged(object sender, EventArgs e)
@@ -414,6 +570,37 @@ namespace DiceBag
                 string whyFail = exp.ToString();
             }
             
+        }
+
+        private void roll100Btn_Click(object sender, EventArgs e)
+        {
+            int result = 0;
+            string output;
+
+            if (modD100Tbx.Text.ToString() != "" && modD100Tbx.Text.ToString() != "0")
+            {
+                if (amountD100Tbx.Text.ToString() != "" && amountD100Tbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(dice[D100].GetSides(), Convert.ToInt32(amountD100Tbx.Text.ToString()), Convert.ToInt32(modD100Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountD100Tbx.Text.ToString() + " d" + dice[D100].GetSides().ToString() + " + " + modD100Tbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(dice[D100].GetSides(), Convert.ToInt32(modD100Tbx.Text.ToString()));
+                    output = result.ToString() + " = " + "1 d" + dice[D100].GetSides().ToString() + " + " + modD100Tbx.Text.ToString();
+                }
+            }
+            else if (amountD100Tbx.Text.ToString() != "" && amountD100Tbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(dice[D100].GetSides(), Convert.ToInt32(amountD100Tbx.Text.ToString()));
+                output = result.ToString() + " = " + amountD100Tbx.Text.ToString() + " d" + dice[D100].GetSides().ToString();
+            }
+            else
+            {
+                result = bag.Roll(dice[D100].GetSides());
+                output = result.ToString() + " = " + "1 d" + dice[D100].GetSides().ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
     

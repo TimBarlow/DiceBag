@@ -577,7 +577,6 @@
             this.label28.Size = new System.Drawing.Size(25, 13);
             this.label28.TabIndex = 60;
             this.label28.Text = "100";
-
             // 
             // modD100Tbx
             // 
@@ -595,7 +594,6 @@
             this.label29.Size = new System.Drawing.Size(13, 13);
             this.label29.TabIndex = 58;
             this.label29.Text = "+";
-
             // 
             // label30
             // 
@@ -605,7 +603,6 @@
             this.label30.Size = new System.Drawing.Size(13, 13);
             this.label30.TabIndex = 57;
             this.label30.Text = "d";
-
             // 
             // amountD100Tbx
             // 
@@ -623,6 +620,7 @@
             this.roll100Btn.TabIndex = 55;
             this.roll100Btn.Text = "Roll";
             this.roll100Btn.UseVisualStyleBackColor = true;
+            this.roll100Btn.Click += new System.EventHandler(this.roll100Btn_Click);
             // 
             // Form1
             // 
