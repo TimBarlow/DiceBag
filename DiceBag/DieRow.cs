@@ -28,11 +28,23 @@ namespace DiceBag
         }
         public void SetMod(int modiferToBeAdded)
         {
-            sides = modiferToBeAdded;
+            modifier = modiferToBeAdded;
         }
         public void SetNumber(int numberOfDice)
         {
-            sides = numberOfDice;
+            num = numberOfDice;
+        }
+        public int GetSides()
+        {
+            return sides;
+        }
+        public int GetMod()
+        {
+            return modifier;
+        }
+        public int GetNumber()
+        {
+            return num;
         }
     }
     

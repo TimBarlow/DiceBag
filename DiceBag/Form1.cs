@@ -32,7 +32,7 @@ namespace DiceBag
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            //Constants used for the index of the die row array;
             dice[DVAR] = new DieRow();
             dice[D3] = new DieRow(0, 3, 0);
             dice[D4] = new DieRow(0, 4, 0);
@@ -48,13 +48,35 @@ namespace DiceBag
         }
         private void RollBtn_Click(object sender, EventArgs e)
         {
-            int sides = 0;
-
-            if (sidesDvarTbx.Text.ToString() == "")
+            if (sidesDvarTbx.Text.ToString() == "" )
                 return;
-            sides = Convert.ToInt32(sidesDvarTbx.Text.ToString());
-            int result = bag.Roll(sides);
-            resultsLbx.Items.Insert(0,result.ToString());
+            int result=0;
+            string output;
+            
+            if (modDvarTbx.Text.ToString() != "" && modDvarTbx.Text.ToString() != "0")
+            {
+                if (amountDvarTbx.Text.ToString() != "" && amountDvarTbx.Text.ToString() != "0")
+                {
+                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(amountDvarTbx.Text.ToString()), Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+                    output = result.ToString() + " = " + amountDvarTbx.Text.ToString() + " d" + sidesDvarTbx.Text.ToString() + " + " + modDvarTbx.Text.ToString();
+                }
+                else
+                {
+                    result = bag.RollMod(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+                    output =  result.ToString() + " = " + "1 d" + sidesDvarTbx.Text.ToString() + " + " + modDvarTbx.Text.ToString();
+                }
+            }
+            else if (amountDvarTbx.Text.ToString() != "" && amountDvarTbx.Text.ToString() != "0")
+            {
+                result = bag.Roll(Convert.ToInt32(sidesDvarTbx.Text.ToString()), Convert.ToInt32(amountDvarTbx.Text.ToString()));
+                output = result.ToString() + " = " + amountDvarTbx.Text.ToString() + " d" + sidesDvarTbx.Text.ToString();
+            }
+            else
+            {
+                result = bag.Roll(Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+                output = result.ToString() + " = " + "1 d" + sidesDvarTbx.Text.ToString(); ;
+            }
+            resultsLbx.Items.Insert(0, output.ToString());
         }
 
         private void label10_Click(object sender, EventArgs e)
@@ -105,98 +127,268 @@ namespace DiceBag
 
         private void AmountTbx_TextChanged(object sender, EventArgs e)
         {
-            dice[DVAR].SetNumber(Convert.ToInt32(amountDvarTbx.Text.ToString()));
+            try
+            {
+                dice[DVAR].SetNumber(Convert.ToInt32(amountDvarTbx.Text.ToString()));
+            }
+            catch(Exception exp)
+            {
+                dice[DVAR].SetNumber(0);// if user enters blank into the textbox
+                string whyFail = exp.ToString();
+            }
         }
 
         private void amountD3Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D3].SetNumber(Convert.ToInt32(amountD3Tbx.Text.ToString()));
+            try
+            {
+                dice[D3].SetNumber(Convert.ToInt32(amountD3Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D3].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
 
         private void amountD6Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D6].SetNumber(Convert.ToInt32(amountD6Tbx.Text.ToString()));
+            try
+            {
+                dice[D6].SetNumber(Convert.ToInt32(amountD6Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D6].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD4Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D4].SetNumber(Convert.ToInt32(amountD4Tbx.Text.ToString()));
+            try
+            {
+                dice[D4].SetNumber(Convert.ToInt32(amountD4Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D4].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD8Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D8].SetNumber(Convert.ToInt32(amountD8Tbx.Text.ToString()));
+            try
+            {
+                dice[D8].SetNumber(Convert.ToInt32(amountD8Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D8].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD10Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D10].SetNumber(Convert.ToInt32(amountD10Tbx.Text.ToString()));
+            try
+            {
+                dice[D10].SetNumber(Convert.ToInt32(amountD10Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D10].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD12Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D12].SetNumber(Convert.ToInt32(amountD12Tbx.Text.ToString()));
+            try
+            {
+                dice[D12].SetNumber(Convert.ToInt32(amountD12Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D12].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD20Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D20].SetNumber(Convert.ToInt32(amountD20Tbx.Text.ToString()));
+            try
+            {
+                dice[D20].SetNumber(Convert.ToInt32(amountD20Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D20].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void amountD100Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D100].SetNumber(Convert.ToInt32(amountD100Tbx.Text.ToString()));
+            try
+            {
+                dice[D100].SetNumber(Convert.ToInt32(amountD100Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D100].SetNumber(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void sidesDvarTbx_TextChanged(object sender, EventArgs e)
         {
-            dice[DVAR].SetSides(Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+            try
+            {
+                dice[DVAR].SetSides(Convert.ToInt32(sidesDvarTbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[DVAR].SetSides(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD3Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D3].SetMod(Convert.ToInt32(modD3Tbx.Text.ToString()));
+            try
+            {
+                dice[D3].SetMod(Convert.ToInt32(modD3Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D3].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modDvarTbx_TextChanged(object sender, EventArgs e)
         {
-            dice[DVAR].SetMod(Convert.ToInt32(modDvarTbx.Text.ToString()));
+            try
+            {
+                dice[DVAR].SetMod(Convert.ToInt32(modDvarTbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[DVAR].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD4Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D4].SetMod(Convert.ToInt32(modD4Tbx.Text.ToString()));
+            try
+            {
+                dice[D4].SetMod(Convert.ToInt32(modD4Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D4].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD6Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D6].SetMod(Convert.ToInt32(modD6Tbx.Text.ToString()));
+            try
+            {
+                dice[D6].SetMod(Convert.ToInt32(modD6Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D6].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD8Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D6].SetMod(Convert.ToInt32(modD6Tbx.Text.ToString()));
+            try
+            {
+                dice[D8].SetMod(Convert.ToInt32(modD8Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D8].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD10Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D10].SetMod(Convert.ToInt32(modD10Tbx.Text.ToString()));
+            try
+            {
+                dice[D10].SetMod(Convert.ToInt32(modD10Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D10].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD12Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D12].SetMod(Convert.ToInt32(modD12Tbx.Text.ToString()));
+            try
+            {
+                dice[D12].SetMod(Convert.ToInt32(modD12Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D12].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD20Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D20].SetMod(Convert.ToInt32(modD20Tbx.Text.ToString()));
+            try
+            {
+                dice[D20].SetMod(Convert.ToInt32(modD20Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D20].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
         private void modD100Tbx_TextChanged(object sender, EventArgs e)
         {
-            dice[D100].SetMod(Convert.ToInt32(modD100Tbx.Text.ToString()));
+            try
+            {
+                dice[D100].SetMod(Convert.ToInt32(modD100Tbx.Text.ToString()));
+            }
+            catch (Exception exp)
+            {
+                dice[D100].SetMod(0);
+                string whyFail = exp.ToString();
+            }
+            
         }
 
     
