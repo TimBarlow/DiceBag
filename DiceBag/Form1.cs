@@ -104,7 +104,7 @@ namespace DiceBag
                 }
                 else if (dice[i].GetNumber() != 0)
                 {
-                    tempResult = bag.Roll(dice[i].GetNumber(), dice[i].GetSides());
+                    tempResult = bag.Roll(dice[i].GetSides(),dice[i].GetNumber());
                 }
                
                 result += tempResult;
