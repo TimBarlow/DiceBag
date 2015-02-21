@@ -15,15 +15,7 @@ namespace DiceBag
         int sides;
         private string log;
         private Random rand;
-        //private functions
-        //private void Log();
-
-        //public functions
-       // public int Roll(int d);
-       // public int Roll(int d, int n);
-       // public int RollMod(int d, int mod);
-       // public int RollMod(int d, int mod, int n);
-
+      
         //Constructor
         public DiceBag()
         {
@@ -34,7 +26,7 @@ namespace DiceBag
         //Function deffinitions
         public int Roll(int d)
         {
-            return rand.Next(1, d+1);
+            return rand.Next(1, d+1);// +1 to make it inclusive
         }
 
         public int Roll(int d, int n)
@@ -42,7 +34,7 @@ namespace DiceBag
             int total = 0;
             for (int i = 1; i <= n; i++)
             {
-                total += rand.Next(1, d);
+                total += rand.Next(1, d +1);
             }
             return total;
         }
